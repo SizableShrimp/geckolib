@@ -91,10 +91,10 @@ public abstract class GeoArmorRenderer<T extends ArmorItem & IAnimatable> extend
 		modelProvider.setLivingAnimations(currentArmorItem, this.getUniqueID(this.currentArmorItem), itemEvent);
 		this.fitToBiped();
 		stack.push();
-		MinecraftClient.getInstance().getTextureManager().bindTexture(getTextureLocation(currentArmorItem));
+		MinecraftClient.getInstance().getTextureManager().bindTexture(getTexture(currentArmorItem));
 		Color renderColor = getRenderColor(currentArmorItem, partialTicks, stack, null, bufferIn, packedLightIn);
 		RenderLayer renderType = getRenderType(currentArmorItem, partialTicks, stack, null, bufferIn, packedLightIn,
-				getTextureLocation(currentArmorItem));
+				getTexture(currentArmorItem));
 		render(model, currentArmorItem, partialTicks, renderType, stack, null, bufferIn, packedLightIn,
 				OverlayTexture.DEFAULT_UV, (float) renderColor.getRed() / 255f, (float) renderColor.getGreen() / 255f,
 				(float) renderColor.getBlue() / 255f, (float) renderColor.getAlpha() / 255);
@@ -175,7 +175,7 @@ public abstract class GeoArmorRenderer<T extends ArmorItem & IAnimatable> extend
 	}
 
 	@Override
-	public Identifier getTextureLocation(T instance) {
+	public Identifier getTexture(T instance) {
 		return this.modelProvider.getTextureLocation(instance);
 	}
 

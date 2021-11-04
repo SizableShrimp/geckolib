@@ -31,7 +31,7 @@ public abstract class GeoArmorItem extends ArmorItem implements ArmorProvider {
 
 		Class<? extends ArmorItem> clazz = this.getClass();
 		GeoArmorRenderer renderer = GeoArmorRenderer.getRenderer(clazz);
-		return renderer.getTextureLocation((ArmorItem) stack.getItem());
+		return renderer.getTexture((ArmorItem) stack.getItem());
 	}
 
 }

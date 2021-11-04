@@ -95,7 +95,7 @@ public interface IGeoRenderer<T> {
 
 	GeoModelProvider getGeoModelProvider();
 
-	Identifier getTextureLocation(T instance);
+	Identifier getTexture(T instance);
 
 	default void renderEarly(T animatable, MatrixStack stackIn, float ticks, VertexConsumerProvider renderTypeBuffer,
 			VertexConsumer vertexBuilder, int packedLightIn, int packedOverlayIn, float red, float green, float blue,
