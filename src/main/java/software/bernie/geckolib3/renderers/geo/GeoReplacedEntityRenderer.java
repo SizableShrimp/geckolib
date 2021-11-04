@@ -179,7 +179,7 @@ public abstract class GeoReplacedEntityRenderer<T extends IAnimatable> extends E
 
 	@Override
 	public Identifier getTexture(Entity entity) {
-		return getTextureLocation(currentAnimatable);
+		return getTexture(currentAnimatable);
 	}
 
 	@Override
@@ -279,7 +279,7 @@ public abstract class GeoReplacedEntityRenderer<T extends IAnimatable> extends E
 	}
 
 	@Override
-	public Identifier getTextureLocation(Object instance) {
+	public Identifier getTexture(Object instance) {
 		return this.modelProvider.getTextureLocation((IAnimatable) instance);
 	}
 
